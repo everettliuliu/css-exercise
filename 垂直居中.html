@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#div1{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			
+		}
+		#left{
+			background-color: #0000FF;
+			height: 200px;
+			width: 200px;
+		}
+		#center{
+			width: 200px;
+			padding-top: 80px;
+			padding-bottom: 80px;
+			background-color: #00FFFF;
+		}
+		#right{
+			height: 200px;
+			width: 200px;
+			background-color: #F100F9;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		#span1{
+			/* 单行文字居中，父元素有高度子元素设置相等*/
+			line-height: 200px;
+			
+			/* 多行文字居中 */
+			/* display: none; */
+		}
+		#p1{
+			/* 单行文字居中*/
+			/* line-height: 200px;
+			margin: 0; */
+			display: none;
+		}
+		#sp2{
+			/* 设置父元素上下padding */
+			font-size: 10px;
+		}
+		.divul{
+			
+			
+		}
+		.ul{
+			border: 1px solid;
+			
+			margin: auto 0;
+			height: 400px;
+			background-color: azure;
+			/* ul列表居中的父元素 */
+			/* display: table; */
+			/* grid */
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			align-items: center;
+			justify-content: center;
+		}
+		li{
+			/* ul列表居中 */
+			/* display: table-cell;
+			vertical-align: middle; */
+			
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<div id='left'>
+			<span id='span1' >我是一个span元素</span>
+			<p id='p1'>我是一个p元素</p>
+		</div>
+		<div id="center">
+			<span id='span2' >我是一个span元素。我是一个span元素。</span>
+			
+		</div>
+		<div id="right">
+			<span id='span3' >我是一个span元素我是一个span元素我是一个span元素</span>
+			
+		</div>
+	</div>
+	
+	<div class="divul">
+		<ul class='ul'>
+			<li><a href="">居中</a></li>
+			<li><a href="">居中</a></li>
+			<li><a href="">居中</a></li>
+			<li><a href="">居中</a></li>
+		</ul>
+	</div>
+	
+	
+</body>
+</html>

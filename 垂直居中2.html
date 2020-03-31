@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#div1{
+			height: 200px;
+			width: 200px;
+			margin: 0 0;
+			background-color: #0000FF;
+			position: relative;
+		}
+		#i1{
+			height: 100px;
+			width: 100px;
+			margin: 0 0;
+			position: absolute;
+			background-color: #00FFFF;
+			top: 50%;
+			left: 50%;
+			/* 绝对定位的两种居中方式 */
+			transform: translate(-50%,-50%);
+			/* margin-top: -250px;
+			margin-left: -250px; */
+			text-align: center;
+		}
+		/* 行内块元素方法 */
+		#main{
+			width: 200px;
+			height: 100px;
+			background-color: #333333;
+		}
+		#i2{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		#main::after{
+			display: inline-block;
+			content: '';
+			height: 100%;
+			vertical-align: middle;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<p id="i1">居中</p>
+	</div>
+	<div id="main">
+			<input id="i2" type="text" placeholder="居中"/>
+	</div>
+
+</body>
+</html>

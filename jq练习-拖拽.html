@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jq</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+
+</body>
+<script>
+    //js拖拽
+    window.onload = function() {
+        var div1 = document.getElementById('div1')
+        div1.onmousedown = function(ev) {
+            var e = ev || window.event
+            var offsetX = e.clientX - div1.offsetLeft
+            var offsetY = e.clientY - div1.offsetTop
+            document.onmousemove = function(e) {
+
+                div1.style.left = e.clientX - offsetX + 'px'
+                div1.style.top = e.clientY - offsetY + 'px'
+            }
+
+        }
+        document.onmouseup = function() {
+            document.onmousemove = null
+        }
+    }
+
+    //jquery拖拽 可以实现多个div拖拽
+    // $('div').mousedown(function(ev) {
+    //     let e = ev || window.event
+    //     let offsetX = e.clientX - $(this).offset().left
+    //     let offsetY = e.clientY - $(this).offset().top
+    //     let self = this
+    //     $(document).mousemove(function(e) {
+    //         $(self).css({
+    //             left: e.clientX - offsetX,
+    //             top: e.clientY - offsetY
+    //         })
+    //     })
+    //     $(self).mouseup(function() {
+    //         $(document).off('mousemove')
+    //     })
+
+    // })
+</script>
+
+</html>
